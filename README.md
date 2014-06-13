@@ -16,4 +16,5 @@ The XML is parsed and loaded into the DB's tables
 Call example:
 
   SET @productsXml = LOAD_FILE('C:/MySqlXmlSync/products.xml');
+  
   CALL SyncProductsDataFromXML(@productsXml);
