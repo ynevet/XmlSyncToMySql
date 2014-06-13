@@ -1,0 +1,59 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="export_management">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="product">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="version"/>
+              <xs:element type="xs:string" name="insert_date"/>
+              <xs:element type="xs:string" name="warrenty"/>
+              <xs:element type="xs:string" name="price"/>
+              <xs:element name="model">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="code"/>
+                    <xs:element type="xs:string" name="model"/>
+                    <xs:element type="xs:string" name="color"/>
+                    <xs:element type="xs:string" name="size"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="internal">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="color"/>
+                    <xs:element type="xs:string" name="size"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="options">
+                <xs:complexType mixed="true">
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="s_option" maxOccurs="unbounded" minOccurs="0"/>
+                    <xs:element type="xs:string" name="extra_option" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="images">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="image" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="small"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:short" name="id"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:int" name="userid"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
