@@ -1,0 +1,11 @@
+CREATE
+DEFINER = 'root'@'localhost'
+EVENT companydb.ProductsDataSyncEvent 
+ON SCHEDULE EVERY '1' DAY 	STARTS '2014-06-13 01:27:38' 
+COMMENT 'Synchronize Products table with Products XMLs'
+DO
+BEGIN
+SET @productsXml = LOAD_FILE('C:/MySqlXmlSync/products.xml');
+  CALL SyncProductsDataFromXML(@productsXml);
+END;
+ALTER EVENT companydb.ProductsDataSyncEvent 	ENABLE
