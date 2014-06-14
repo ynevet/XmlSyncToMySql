@@ -13,7 +13,8 @@ ProductsDataSyncEvent event is raised on a daily basis ->
 Calling the SyncProductsDataFromXML SP with the products XML ->
 The XML is parsed and loaded into the DB's tables
 
-Call example:
+Usage example:
+==============
 ```
   SET @productsXml = LOAD_FILE('C:/MySqlXmlSync/products.xml');
   
