@@ -1,7 +1,8 @@
 XmlSyncToMySql
 ==============
 
-This repository includes a code for synchronizing XMLs data into a MySql DB's tables using a pure XML + MySql solution.
+This repository was originated from a question (http://stackoverflow.com/questions/24080516/synchronizing-xml-file-to-mysql-database/24128010#24128010) at stackoverflow that I've answer at and includes a code for synchronizing XMLs data into a MySql DB's tables using a pure XML + MySql solution.
+
 
 Our specific solution:
 ======================
