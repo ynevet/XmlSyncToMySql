@@ -1,5 +1,5 @@
 CREATE DEFINER = 'root'@'localhost'
-PROCEDURE companydb.SyncProductsDataFromXML(IN productsXml TEXT)
+PROCEDURE companydb.SyncProductsDataFromXML(IN productsXml MEDIUMTEXT)
 BEGIN
   
   DECLARE totalProducts INT;
